@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'STS95_ConnectTheDots2VF';
+    src: url('https://nkortenbruck.github.io/STS95_ConnectTheDotsVF.woff2') format('woff2');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'STS93_BalkenVF';
+    src: url('https://nkortenbruck.github.io/STS93_BalkenVF.woff2') format('woff2');
+    font-weight: 100 900;
+}
+
+
+@font-face {
+    font-family: 'STS96_SlashedDottedVF';
+    src: url('https://nkortenbruck.github.io/STS96_SlashedDottedVF.woff2') format('woff2');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'STS97_TiltedLRVF';
+    src: url('https://nkortenbruck.github.io/STS97_TiltedLRVF.woff2') format('woff2');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'STS99_3D2VF';
+    src: url('https://nkortenbruck.github.io/STS99_3D2VF.woff2') format('woff2');
+    font-weight: 100 900;
+}
+
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    font-variation-settings: 'opsz' 650;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    overflow: hidden; 
+}
+
+
+.title-container {
+    position: fixed;
+    top: 1p;
+    left: 50%;
+    align: center;
+    transform: translateX(-50%);
+    z-index: 1000; 
+  
+}
+
+h1 {
+    margin: 0;
+    padding: -20px;
+    color: white;
+    font-size: 90px;
+  font-family: 'STS93_BalkenVF', sans-serif;
+    font-variation-settings: 'opsz' 650
+}
+
+.main-container {
+  position: fixed;
+    align-items: center;
+    gap: 3px;
+    margin-top: 70px; 
+    margin-left: 800px;
+  margin-right: 20px;
+}
+
+.control-panel {
+    position: fixed;
+    left: 40px;
+    top: 143px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    border: 1px solid #B4FF98;
+    border-radius: 30px;
+    padding: 10px;
+    width: 125px; 
+    max-height: 600px; 
+    overflow-y: auto; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.control-panel:hover {
+    transform: scale(1.05);
+    background-color: white;
+    border-color: white;
+}
+
+.control-panel label {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.control-panel button {
+    padding: 16px 16px;
+    font-size: 21px;
+    border-radius: 0px;
+    border: none;
+    cursor: pointer;
+    background-color: #B4FF98;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.control-panel button:hover {
+    background-color: #8AE18E; 
+}
+
+.text-container {
+    position: fixed;
+    top: 100px; 
+    left: 210px; 
+    width: calc(100% - 150px); 
+    height: calc(100vh - 200px); 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#textfeld {
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+  
+    box-sizing: border-box;
+    border: 1px solid #B4FF98;
+    border-radius: 50px;
+    overflow: auto;
+    background-color: white;
+  opacity: 100%; 
+    color: black;
+    font-size: 200px;
+  font-family: 'STS95_ConnectTheDots2VF', sans-serif;
+    font-variation-settings: 'opsz' 650;
+    outline: none;
+ 
+}
+
+#textfeld.placeholder:empty::before {
+    content: attr(data-placeholder);
+    color: grey;
+}
+
+.font-selector {
+    position: fixed;
+  align: center;
+    bottom: 10px; 
+    left: 53%; 
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border: 1px solid #B4FF98;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.font-button {
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background-color: #B4FF98;
+    transition: background-color 0.3s, transform 0.3s; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+ 
+}
+
+.font-button:hover {
+    transform: scale(1.25);
+    background-color: #B4FF98;
+}
+
+.font-button.active {
+    transform: scale(1.25); 
+}
+
+.star-button::before {
+    content: '12';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: Black;
+    clip-path: polygon(5% 0, 0 5%, 30% 50%, 0 95%, 5% 100%, 50% 70%, 95% 100%, 100% 95%, 70% 50%, 100% 5%, 95% 0, 50% 30%);
+}
+
+.cross-button::before {
+    content: '12';
+    display: block;
+    width: 100px;
+    height: 24px;
+    background-color: black;
+    clip-path: polygon(0 47%, 47% 47%, 47% 0, 53% 0, 53% 47%, 100% 47%, 100% 53%, 53% 53%, 53% 100%, 47% 100%, 47% 53%, 0 53%);
+}
+
+.play-button {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+    cursor: pointer;
+    border: none;
+}

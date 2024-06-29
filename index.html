@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schriftart Wechseln</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Gemeinsame HTML-Struktur -->
+    <div class="title-container">
+        <h1>Limitations+Variations=System</h1>
+    </div>
+    <div class="main-container">
+        <div class="control-panel">
+            <!-- Steuerelemente wie Regler, Dropdown, Farbauswahl und Play-Button -->
+            <label for="fontSize">Textgröße:</label>
+            <input type="range" id="fontSize" name="fontSize" min="70" max="500" value="16">
+            <label for="fontWeight">Schriftschnitt:</label>
+            <input type="range" id="fontWeight" name="fontWeight" min="100" max="900" value="100">
+            <button id="playButton" class="play-button"></button>
+            <label for="animationSpeed">Geschwindigkeit:</label>
+            <select id="animationSpeed" name="animationSpeed">
+                <option value="10">Langsam</option>
+                <option value="35">Mittel</option>
+                <option value="50">Schnell</option>
+            </select>
+            <label for="textColor">Textfarbe:</label>
+            <input type="color" id="textColor" name="textColor" value="#000000">
+            <label for="bgColor">Hintergrundfarbe:</label>
+            <input type="color" id="bgColor" name="bgColor" value="#FFFFFF">
+        </div>
+        <div class="text-container">
+            <!-- Container für den bearbeitbaren Text -->
+            <div id="textfeld" contenteditable="true" class="placeholder" data-placeholder="Type the System..."></div>
+        </div>
+    </div>
+    <div class="font-selector">
+        <!-- Schaltflächen zur Auswahl verschiedener Schriftarten -->
+        <button class="font-button" data-font="STS96_SlashedDottedVF" style="font-family: STS96_SlashedDottedVF;">&#9679;</button> <!-- Kreis -->
+        <button class="font-button" data-font="STS93_BalkenVF" style="font-family: 'STS93_BalkenVF';">&#9642;</button> <!-- Quadrat -->
+        <button class="font-button pixel-button" data-font="STS99_3D2VF" style="font-family: 'STS99_3D2VF';">&#9644;</button> <!-- Pixel -->
+        <button class="font-button" data-font="STS95_ConnectTheDots2VF" style="font-family:'STS95_ConnectTheDots2VF';">&#9675;</button> <!-- Oval -->
+        <button class="font-button star-button" data-font="STS97_TiltedLRVF" style="font-family: STS97_TiltedLRVF;"></button> <!-- Stern -->
+        <button class="font-button cross-button" data-font="STS97_TiltedLRVF" style="font-family:'STS97_TiltedLRVF';"></button> <!-- Kreuz -->
+    </div>
+    <!-- JavaScript-Datei für zusätzliche Funktionen -->
+    <script src="script.js"></script>
+</body>
+</html>
