@@ -1,39 +1,39 @@
 @font-face {
-    font-family: 'STS95_ConnectTheDots2VF';
-    src: url('https://nkortenbruck.github.io/STS95_ConnectTheDotsVF.woff2') format('woff2');
+    font-family: 'STS102_ConnectTheDotsVF';
+    src: url('https://nkortenbruck.github.io/STS102_ConnectTheDotsVF.ttf') format('truetype');
     font-weight: 100 900;
 }
 
 @font-face {
-    font-family: 'STS93_BalkenVF';
-    src: url('https://nkortenbruck.github.io/STS93_BalkenVF.woff2') format('woff2');
-    font-weight: 100 900;
-}
-
-
-@font-face {
-    font-family: 'STS96_SlashedDottedVF';
-    src: url('https://nkortenbruck.github.io/STS96_SlashedDottedVF.woff2') format('woff2');
+    font-family: 'STS101_BalkenVF';
+    src: url('https://nkortenbruck.github.io/STS101_BalkenVF.ttf') format('truetype');
     font-weight: 100 900;
 }
 
 @font-face {
-    font-family: 'STS97_TiltedLRVF';
-    src: url('https://nkortenbruck.github.io/STS97_TiltedLRVF.woff2') format('woff2');
+    font-family: 'STS103_SwooshedVF';
+    src: url('https://nkortenbruck.github.io/STS103_SwooshedVF.ttf') format('truetype');
     font-weight: 100 900;
 }
 
 @font-face {
-    font-family: 'STS99_3D2VF';
-    src: url('https://nkortenbruck.github.io/STS99_3D2VF.woff2') format('woff2');
+    font-family: 'STS100_TiltedLRVF';
+    src: url('https://nkortenbruck.github.io/STS100_TiltedLRVF.ttf') format('truetype');
     font-weight: 100 900;
 }
 
 @font-face {
-    font-family: 'STS100_SternVF';
-    src: url('https://nkortenbruck.github.io/STS100_SternVF.woff2') format('woff2');
+    font-family: 'STS104_3DVF';
+    src: url('https://nkortenbruck.github.io/STS104_3DVF.ttf') format('truetype');
     font-weight: 100 900;
 }
+
+@font-face {
+    font-family: 'STS105_SlashedVF';
+    src: url('https://nkortenbruck.github.io/STS105_SlashedVF.ttf') format('truetype');
+    font-weight: 100 900;
+}
+
 
 body {
     font-family: 'Helvetica', sans-serif;
@@ -64,7 +64,7 @@ h1 {
     padding: -20px;
     color: white;
     font-size: 90px;
-  font-family: 'STS93_BalkenVF', sans-serif;
+  font-family: 'STS101_BalkenVF', sans-serif;
     font-variation-settings: 'opsz' 650
 }
 
@@ -145,7 +145,7 @@ h1 {
   opacity: 100%; 
     color: black;
     font-size: 200px;
-  font-family: 'STS95_ConnectTheDots2VF', sans-serif;
+  font-family: 'STS102_ConnectTheDotsVF', sans-serif;
     font-variation-settings: 'opsz' 650;
     outline: none;
  
