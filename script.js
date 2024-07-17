@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 // Globale Variablen für die Animation
 let animationInterval;
 let isAnimating = false;
@@ -153,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("textfeld").setAttribute("data-placeholder", glyphs);
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+
     var popupBtn = document.getElementById("popupBtn");
     var popup = document.getElementById("popup");
     var closeBtn = document.querySelector(".close");
