@@ -5,47 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schriftart Wechseln</title>
     <link rel="stylesheet" href="style.css">
+  <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glyphs Placeholder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="main-container">
+    <div class="text-container">
+        <!-- Container für den bearbeitbaren Text -->
+   
+<script src="script.js"></script>
+</body>
+</html>
+
 </head>
 <body>
     <!-- Gemeinsame HTML-Struktur -->
     <div class="title-container">
-        <h1>Limitations+Variations=System</h1>
+        <h1>SYSTEMTYPE</h1>
     </div>
-    <div class="main-container">
-        <div class="control-panel">
-            <!-- Steuerelemente wie Regler, Dropdown, Farbauswahl und Play-Button -->
-            <label for="fontSize">Textgröße:</label>
-            <input type="range" id="fontSize" name="fontSize" min="70" max="500" value="16">
-            <label for="fontWeight">Schriftschnitt:</label>
-            <input type="range" id="fontWeight" name="fontWeight" min="100" max="900" value="100">
-            <button id="playButton" class="play-button"></button>
-            <label for="animationSpeed">Geschwindigkeit:</label>
-            <select id="animationSpeed" name="animationSpeed">
-                <option value="10">Langsam</option>
-                <option value="35">Mittel</option>
-                <option value="50">Schnell</option>
-            </select>
-            <label for="textColor">Textfarbe:</label>
-            <input type="color" id="textColor" name="textColor" value="#000000">
-            <label for="bgColor">Hintergrundfarbe:</label>
-            <input type="color" id="bgColor" name="bgColor" value="#FFFFFF">
+    <div class="sidebar">
+    <div class="control-panel">
+        <!-- Steuerelemente wie Regler, Dropdown, Farbauswahl und Play-Button -->
+        <label for="fontSize">Size</label>
+        <input type="range" id="fontSize" name="fontSize" min="70" max="800" value="16">
+        <label for="fontWeight">Weight</label>
+        <input type="range" id="fontWeight" name="fontWeight" min="100" max="900" value="100">
+        <label for="letterSpacing">Spacing</label>
+        <input type="range" id="letterSpacing" name="letterSpacing" min="-120" max="50" step="1" value="0">
+        <label for="lineHeight">Line Height</label>
+        <input type="range" id="lineHeight" name="lineHeight" min="0,5" max="1" step="0.1" value="1"><button id="playButton" class="play-button"></button>
+        <label for="animationSpeed">Speed</label>
+        <select id="animationSpeed" name="animationSpeed">
+            <option value="10">Slow</option>
+            <option value="35">Medium</option>
+            <option value="50">Fast</option>
+        </select>
+        <div class="color-selector">
+            <div class="color-control">
+                <label for="textColor">Color1</label>
+                <input type="color" id="textColor" name="textColor" value="#000000">
+            </div>
+            <div class="color-control">
+                <label for="bgColor">Color2</label>
+                <input type="color" id="bgColor" name="bgColor" value="#ffffff">
+            </div>
         </div>
+
+        <div class="font-selector">
+            <!-- Schriftart Buttons -->
+            <button class="font-button" data-font="STS102_ConnectTheDotsVF" style="font-family:'STS102_ConnectTheDotsVF';">&#9675;</button> <!-- Oval -->
+            <button class="font-button cross-button" data-font="'STS101_BalkenVF'"></button>
+            <button class="font-button triangle-button" data-font="'STS103_SwooshedVF'"></button>
+            <button class="font-button square-button" data-font="'STS100_TiltedLRVF'"></button>
+            <button class="font-button circle-button" data-font="'STS104_3DVF'"></button>
+            <button class="font-button hexagon-button" data-font="'STS105_SlashedVF'"></button>
+       </div> 
+
+        <!-- Stylistic Sets -->
+        <div class="stylistic-sets">
+          <button class="set-button" data-set="1">1</button> 
+          <button class="set-button" data-set="2">2</button>
+            <button class="set-button" data-set="3">3</button>
+            <button class="set-button" data-set="4">4</button>
+          <button class="set-button" data-set="5">5</button>
+        </div>
+    </div>
+</div>
+      </div>
+  
+    <div class="main-container">
         <div class="text-container">
             <!-- Container für den bearbeitbaren Text -->
             <div id="textfeld" contenteditable="true" class="placeholder" data-placeholder="Type the System..."></div>
         </div>
     </div>
-    <div class="font-selector">
-        <!-- Schaltflächen zur Auswahl verschiedener Schriftarten -->
-        <button class="font-button" data-font="STS105_SlashedVF" style="font-family: 'STS105_SlashedVF';">&#9679;</button> <!-- Kreis -->
-<button class="font-button" data-font="STS101_BalkenVF" style="font-family: 'STS101_BalkenVF';">&#9642;</button> <!-- Quadrat -->
-<button class="font-button pixel-button" data-font="STS104_3DVF" style="font-family: 'STS104_3DVF';">&#9644;</button> <!-- Pixel -->
-<button class="font-button" data-font="STS102_ConnectTheDotsVF" style="font-family:'STS102_ConnectTheDotsVF';">&#9675;</button> <!-- Oval -->
-<button class="font-button star-button" data-font="STS103_SwooshedVF" style="font-family: 'STS103_SwooshedVF';"></button> <!-- Stern -->
-<button class="font-button cross-button" data-font="STS100_TiltedLRVF" style="font-family: 'STS100_TiltedLRVF';"></button> <!-- Kreuz -->
+ 
+    <title>I</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="popupBtn">i</button>
 
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <p>HELLO!<br><br>The <i>SYSTEMTYPE</i>-Project is a modular typeface collection,<br> systematically built on a unified grid system using limited components. <br>Every glyph you see here is build with the same structural elements.<br> You can customize the text using different modular components and stylistic sets, <br>experimenting with size, weight, color, and more. <br><br><br>
+<br><i>Noah Kortenbruck</i>, 2024</p>
+         <div class="image-container">
+        <img src="https://nkortenbruck.github.io
+/glyphs.gif" alt="pep">
     </div>
+    </div>
+
     <!-- JavaScript-Datei für zusätzliche Funktionen -->
     <script src="script.js"></script>
 </body>
 </html>
+  
+ 
+

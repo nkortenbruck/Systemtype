@@ -1,3 +1,10 @@
+
+@font-face {
+    font-family: 'S101_BalkenOhneRaster-Regular';
+    src: url('https://nkortenbruck.github.io/STS101_BalkenOhneRaster-Regular.otf') format('opentype');
+    font-weight: 900;
+}
+
 @font-face {
     font-family: 'STS102_ConnectTheDotsVF';
     src: url('https://nkortenbruck.github.io/STS102_ConnectTheDotsVF.ttf') format('truetype');
@@ -34,82 +41,108 @@
     font-weight: 100 900;
 }
 
-
 body {
-    font-family: 'Helvetica', sans-serif;
-    font-variation-settings: 'opsz' 650;
+    font-family: S101_BalkenOhneRaster-Regular;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     height: 100vh;
     margin: 0;
-    background-color: black;
-    overflow: hidden; 
+    background-color: white; /* Hintergrundfarbe auf weiß geändert */
+    overflow: hidden;
 }
 
-
 .title-container {
-    position: fixed;
-    top: 1p;
-    left: 50%;
-    align: center;
-    transform: translateX(-50%);
-    z-index: 1000; 
-  
+    position: fixed; /* Feste Position */
+    top: 0; /* Ganz oben auf der Seite */
+    left: 0; /* Links in der Ecke */
+    z-index: 10; /* Hohe Z-Index für Überlagerung */
+    padding: 0px; /* Optional: Padding hinzufügen */
+  background-color: #B4FF98;
+  border: 0px solid #B4FF98;
 }
 
 h1 {
     margin: 0;
-    padding: -20px;
-    color: white;
-    font-size: 90px;
-  font-family: 'STS101_BalkenVF', sans-serif;
-    font-variation-settings: 'opsz' 650
+    padding: 0.5; /* Padding entfernt */
+    color: black; /* Textfarbe auf schwarz */
+    font-size: 67px;
+    font-family: 'S101_BalkenOhneRaster-Regular', sans-serif;
+    font-variation-settings: 'opsz' 900;
+    letter-spacing: 0px; /* Textlaufweite einstellen */
+    line-height: 0.4; /* Zeilenabstand einstellen */
+    text-align: left; /* Text linksbündig */
+
+    /* Outline durch text-shadow */
+    text-shadow: 
+        1px 1px 0 rgba(180, 255, 152, 1), /* Beispiel für rote Outline */
+        -1px -1px 0 rgba(180, 255, 152, 1), 
+        1px -1px 0 rgba(180, 255, 152, 1), 
+        -1px 1px 0 rgba(180, 255, 152, 1);
 }
+
 
 .main-container {
   position: fixed;
-    align-items: center;
-    gap: 3px;
-    margin-top: 70px; 
-    margin-left: 800px;
-  margin-right: 20px;
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 200vh;
+    margin-top: -5px;
+    margin-left: 115px;
 }
 
-.control-panel {
+.sidebar {
     position: fixed;
-    left: 40px;
-    top: 143px;
+    left: 0;
+    top: 50px;
+    width: 225px;
+    height: calc(100vh - 75px);
     display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: white;
-    border: 1px solid #B4FF98;
-    border-radius: 30px;
+    border-right: 0px solid #B4FF98;
+  border: none;
     padding: 10px;
-    width: 125px; 
-    max-height: 600px; 
-    overflow-y: auto; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: white;
+    border: 0px solid #B4FF98;
+    border-radius: 0px;
+  border:none;
+    padding: 0px;
+    width: 95%;
+   
 }
 
 .control-panel:hover {
-    transform: scale(1.05);
+    transform: scale(1.0);
     background-color: white;
     border-color: white;
 }
 
 .control-panel label {
     color: gray;
-    font-size: 14px;
+    font-size: 35px;
     margin-bottom: 5px;
 }
 
 .control-panel button {
-    padding: 16px 16px;
-    font-size: 21px;
+    padding: 0px 0px 7.5px 0px;
+    font-size: 35px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 0px;
     border: none;
     cursor: pointer;
@@ -123,96 +156,161 @@ h1 {
 }
 
 .text-container {
-    position: fixed;
-    top: 100px; 
-    left: 210px; 
-    width: calc(100% - 150px); 
-    height: calc(100vh - 200px); 
+  display: flex;
+    flex-grow: 1;
     padding: 20px;
     box-sizing: border-box;
+  border: none
+    background-color: white; /* Hintergrundfarbe auf weiß geändert */
 }
-
+   
 #textfeld {
-    width: 80%;
+    width: 100%;
     height: 100%;
     padding: 20px;
-  
     box-sizing: border-box;
-    border: 1px solid #B4FF98;
-    border-radius: 50px;
+    border: none; 
     overflow: auto;
-    background-color: white;
-  opacity: 100%; 
     color: black;
-    font-size: 200px;
-  font-family: 'STS102_ConnectTheDotsVF', sans-serif;
-    font-variation-settings: 'opsz' 650;
+    font-size: 70px;
+    font-family: 'STS101_BalkenVF', sans-serif;
+    font-variation-settings: 'opsz' 500;
+  letter-spacing: 0px; /* Initialwert für das Letter Spacing */
+    line-height: 1; /* Initialwert für das Line Height */
     outline: none;
- 
 }
 
-#textfeld.placeholder:empty::before {
-    content: attr(data-placeholder);
-    color: grey;
+/* Regler für die Schriftgröße */
+#fontSize, #fontWeight, #letterSpacing, #lineHeight {
+    -webkit-appearance: none;
+    appearance: none; 
+    background: grey; 
+    height: 1px; 
+    border-radius: 5px; 
 }
 
+/* Stil für den Daumen des Reglers */
+#fontSize::-webkit-slider-thumb, 
+#fontWeight::-webkit-slider-thumb, #letterSpacing::-webkit-slider-thumb,
+#lineHeight::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none; 
+    width: 20px; /* Breite des Daumens */
+    height: 20px; /* Höhe des Daumens */
+    background: #B4FF98; /* Farbe des Daumens */
+    border-radius:50%; /* Abgerundete Form */
+  border: none;
+    cursor: pointer; /* Zeiger bei Hover */}
+#fontSize::-webkit-slider-thumb:hover {
+    background-color: #8AE18E; 
+}
+#fontWeight#fontSize::-webkit-slider-thumb:hover {
+    background-color: #8AE18E; 
+}
+
+#fontSize::-moz-range-thumb, 
+#fontWeight::-moz-range-thumb {
+    width: 20px; /* Breite des Daumens */
+    height: 20px; /* Höhe des Daumens */
+    background: #B4FF98; /* Farbe des Daumens */
+    border-radius: 50%; /* Abgerundete Form */
+    cursor: pointer; /* Zeiger bei Hover */
+}
+#fontSize:hover {
+    background-color: #8AE18E; 
+}
+#fontWeight:hover {
+    background-color: #8AE18E; 
+}
 .font-selector {
-    position: fixed;
-  box-align: center;
-    bottom: 10px; 
-    left: 53%; 
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 600px;
-    background-color: white;
-    border: 1px solid #B4FF98;
-    border-radius: 50px;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+    gap: 10px;
+  margin: 10px 10px;
+    width: 95%; 
 }
 
 .font-button {
-    padding: 10px 20px;
+    padding: 10px 10px 10px 10px;
     font-size: 24px;
     cursor: pointer;
-    border: none;
+    border: 1px solid transparent; 
+    border-radius: 50px !important;
     background-color: #B4FF98;
-    transition: background-color 0.3s, transform 0.3s; 
+    transition: background-color 0.3s, transform 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 24px;
- 
+    width: 70px;
+    height: 35px;
+    border-radius: 35px;
+  font-family: S101_BalkenOhneRaster-Regular;
+  font-weight: 900;
+    text-align: center;
 }
 
 .font-button:hover {
-    transform: scale(1.25);
-    background-color: #B4FF98;
+    transform: scale(1.1);
+    background-color: #8AE18E;
 }
 
 .font-button.active {
-    transform: scale(1.25); 
+    transform: scale(1.0); 
+  background-color: #8AE18E;
 }
 
 .star-button::before {
-    content: '12';
+    content: '';
     display: block;
-    width: 24px;
-    height: 24px;
-    background-color: Black;
-    clip-path: polygon(5% 0, 0 5%, 30% 50%, 0 95%, 5% 100%, 50% 70%, 95% 100%, 100% 95%, 70% 50%, 100% 5%, 95% 0, 50% 30%);
+    width: 10px;
+    height: 12px;
+    background-color: black;
+    clip-path: ellipse(22% 48% at 50% 50%);
 }
 
 .cross-button::before {
-    content: '12';
+    content: '';
     display: block;
-    width: 100px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
     background-color: black;
-    clip-path: polygon(0 47%, 47% 47%, 47% 0, 53% 0, 53% 47%, 100% 47%, 100% 53%, 53% 53%, 53% 100%, 47% 100%, 47% 53%, 0 53%);
+    clip-path: polygon(80% 0, 95% 5%, 100% 20%, 100% 80%, 95% 95%, 80% 100%, 20% 100%, 5% 95%, 0 79%, 0 20%, 5% 5%, 20% 0);
+}
+
+.triangle-button::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    clip-path: polygon(30% 0, 50% 0, 41% 40%, 87% 40%, 70% 100%, 49% 100%, 59% 60%, 15% 60%);
+}
+
+.square-button::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 15px;
+    background-color: black;
+    clip-path: polygon(0 40%, 43% 40%, 75% 0, 100% 0, 68% 39%, 100% 40%, 100% 60%, 59% 60%, 25% 100%, 0 100%, 34% 60%, 0 60%);
+}
+
+.circle-button::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    clip-path: polygon(0 30%, 75% 30%, 100% 50%, 100% 85%, 25% 85%, 0 65%);
+}
+
+.hexagon-button::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    clip-path: circle(50% at 50% 50%);
 }
 
 .play-button {
@@ -222,4 +320,176 @@ h1 {
     clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
     cursor: pointer;
     border: none;
+    margin-top: 25px; /* Abstand nach oben */
+    margin-left: 103px; /* Abstand nach links */
 }
+
+.set-button {
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid transparent; 
+    border-radius: 50px !important;
+    background-color: #B4FF98;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 35px;
+    border-radius: 35px;
+  font-family: S101_BalkenOhneRaster-Regular;
+  font-weight: 900;
+    text-align: center;
+  line-height: 1.5;
+}
+
+.set-button:hover {
+    background-color: #8AE18E; /* Hintergrundfarbe bei Hover */
+    transform: scale(1.1); /* Leichtes Wachsen bei Hover */
+}
+
+.set-button:active {
+    background-color: #8AE18E; /* Hintergrundfarbe für aktive Buttons */
+    transform: scale(1.0); /* Leichtes Vergrößern für aktive Buttons */
+}
+
+
+.stylistic-sets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+    gap: 10px;
+  margin: 0px 10px 10px 10px;
+    width: 95%; 
+}
+
+.placeholder:empty:before {
+    content: attr(data-placeholder);
+    color: #999;
+    white-space: pre-wrap;
+ }
+
+.color-selector {
+  margin: 5px 0px 25px 25px;
+    display: flex;
+    gap: 35px;
+}
+
+.color-control {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.color-control input[type="color"] {
+    -webkit-appearance: none; 
+    border: none;
+    width: 35px;
+    height: 35px; 
+    border-radius: 50%; 
+    padding: 0;
+    margin-top: 10px;
+  margin-left: 10px;
+    cursor: pointer;
+    outline: none; 
+}
+
+.color-control input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 50%;
+}
+
+.color-control input[type="color"]::-webkit-color-swatch {
+    border: 1;
+    border-radius: 50%;
+}
+
+.color-control label {
+    font-size: 35px;
+}
+.color-control:hover {
+    transform: scale(1.05); /* Leichtes Wachsen bei Hover */
+}
+
+#popupBtn {
+    position: fixed;
+    top:3px;
+    right: 10px;
+    background-color: #B4FF98;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+  font-family: S101_BalkenOhneRaster-Regular;
+  font-weight: 900;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 35px;
+    border-radius: 50px;
+    cursor: pointer;
+  padding: 0px 10px 10px 10px;
+}
+
+#popupBtn:hover {
+    background-color: #8AE18E;
+  transform: scale(1.1);
+}
+
+/* Pop-Up Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  z-index: 20;
+}
+
+.popup-content {
+    background-color: white;
+  font-family: Hevetica, sans-serif;
+    padding: 10px 10px 10px 10px;
+  border: none;
+    width: 600px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: center-bottom;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image-container{
+    text-align: center; /* Bild zentrieren */
+    margin: 0px; /* Abstand um das Bild */
+}
+
+.image-container img{
+    width: 100%; 
+    max-width: 200px
+    height: auto; 
+    border-radius: 0px;
+}
+.image-container {
+    text-align: center;
+    margin: 0px; 
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 200px;
+    height: auto; /
